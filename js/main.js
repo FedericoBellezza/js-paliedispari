@@ -24,18 +24,39 @@
 // Dichiariamo chi ha vinto.
 
 // * l'utente sceglie pari o dispari e controllo che l'input sia valido
-let userChoice = prompt("Scegli 'pari' o 'dispari'");
+let userChoice = prompt("Scegli 'pari' o 'dispari'"); // scelta pari o dispari dell'utente
+let pcNum; // numero generato per il PC
+let userNum; // numero scelto dall'utente
+let Sum; // somma tra il numero del PC e il numero dell'utente
 
 while (userChoice !== 'pari' && userChoice !== 'dispari') {
-	console.log('parola sbagliata');
+	console.error('parola sbagliata');
 	userChoice = prompt("Parola non adatta, scegli 'pari' o 'dispari'");
 }
+console.log('Il giocatore ha scelto: ' + userChoice);
+
+// * l'utente sceglie un numero da 1 a 5 e controllo che l'input sia valido
+userNum = parseInt(prompt('Scegli un numero da 1 a 5'));
+while (isNaN(userNum) || userNum < 1 || userNum > 5) {
+	console.error('Numero inserito non valido');
+	userNum = parseInt(prompt('Numero inserito non valido, scegli un numero da 1 a 5'));
+}
+console.log('Il numero del giocatore è: ' + userNum);
 
 // * Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function randomNumberGeneration(min, max) {
 	return Math.floor(Math.random() * (max - min) + min);
 }
-console.log('Il numero del computer è: ' + randomNumberGeneration(1, 5));
+alert('Premi "OK" o "INVIO" per generare il numero del computer');
+pcNum = randomNumberGeneration(1, 5);
+console.log('Il numero del computer è: ' + pcNum);
+
+// * Sommiamo i due numeri
+function numberSum(val1, val2) {
+	return val1 + val2;
+}
+Sum = numberSum(userNum, pcNum);
+console.log('La somma dei due numeri è: ' + Sum);
 
 // ! Consigli del giorno
 // 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
