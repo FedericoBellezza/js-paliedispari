@@ -14,7 +14,7 @@ function isWordPalindrome() {
 	return palindromeWord.join('') === userWord;
 }
 
-console.log(isWordPalindrome());
+console.log(isWordPalindrome() ? 'La parola inserita è palindroma' : 'La parola inserita non è palindroma');
 
 // ^ Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
