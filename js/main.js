@@ -1,20 +1,20 @@
-// // ^ Palindroma
-// // Chiedere all’utente di inserire una parola
-// // Creare una funzione per capire se la parola inserita è palindroma
+// ^ Palindroma
+// Chiedere all’utente di inserire una parola
+// Creare una funzione per capire se la parola inserita è palindroma
 
-// // * chiedo all'utente di inserire una parola
-// const userWord = prompt('Inserisci una parola');
-// let palindromeWord = [];
+// * chiedo all'utente di inserire una parola
+const userWord = prompt('Inserisci una parola');
+let palindromeWord = [];
 
-// // * creo una funzione per capire se la parola è palindroma (Ritorna VERO o FALSO)
-// function isWordPalindrome() {
-// 	for (let i = 0; i < userWord.length; i++) {
-// 		palindromeWord.unshift(userWord[i]);
-// 	}
-// 	return palindromeWord.join('') === userWord;
-// }
+// * creo una funzione per capire se la parola è palindroma (Ritorna VERO o FALSO)
+function isWordPalindrome() {
+	for (let i = 0; i < userWord.length; i++) {
+		palindromeWord.unshift(userWord[i]);
+	}
+	return palindromeWord.join('') === userWord;
+}
 
-// console.log(isWordPalindrome() ? 'La parola inserita è palindroma' : 'La parola inserita non è palindroma');
+console.log(isWordPalindrome() ? 'La parola inserita è palindroma' : 'La parola inserita non è palindroma');
 
 // ^ Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -34,6 +34,11 @@ while (userChoice !== 'pari' && userChoice !== 'dispari') {
 	userChoice = prompt("Parola non adatta, scegli 'pari' o 'dispari'");
 }
 console.log('Il giocatore ha scelto: ' + userChoice);
+if (userChoice === 'pari') {
+	userChoice = true;
+} else {
+	userChoice = false;
+}
 
 // * l'utente sceglie un numero da 1 a 5 e controllo che l'input sia valido
 userNum = parseInt(prompt('Scegli un numero da 1 a 5'));
@@ -57,6 +62,23 @@ function numberSum(val1, val2) {
 }
 Sum = numberSum(userNum, pcNum);
 console.log('La somma dei due numeri è: ' + Sum);
+
+// * Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+function isEven(num) {
+	if (num % 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+console.log(isEven(Sum) ? 'La somma dei due numeri è PARI!' : 'La somma dei due numeri è DISPARI');
+
+// * Dichiariamo chi ha vinto.
+if (userChoice === isEven(Sum)) {
+	console.log('Complimenti, HAI VINTO');
+} else {
+	console.log('iL COMPUTER HA VINTO');
+}
 
 // ! Consigli del giorno
 // 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
