@@ -1,20 +1,20 @@
-// ^ Palindroma
-// Chiedere all’utente di inserire una parola
-// Creare una funzione per capire se la parola inserita è palindroma
+// // ^ Palindroma
+// // Chiedere all’utente di inserire una parola
+// // Creare una funzione per capire se la parola inserita è palindroma
 
-// * chiedo all'utente di inserire una parola
-const userWord = prompt('Inserisci una parola');
-let palindromeWord = [];
+// // * chiedo all'utente di inserire una parola
+// const userWord = prompt('Inserisci una parola');
+// let palindromeWord = [];
 
-// * creo una funzione per capire se la parola è palindroma (Ritorna VERO o FALSO)
-function isWordPalindrome() {
-	for (let i = 0; i < userWord.length; i++) {
-		palindromeWord.unshift(userWord[i]);
-	}
-	return palindromeWord.join('') === userWord;
-}
+// // * creo una funzione per capire se la parola è palindroma (Ritorna VERO o FALSO)
+// function isWordPalindrome() {
+// 	for (let i = 0; i < userWord.length; i++) {
+// 		palindromeWord.unshift(userWord[i]);
+// 	}
+// 	return palindromeWord.join('') === userWord;
+// }
 
-console.log(isWordPalindrome() ? 'La parola inserita è palindroma' : 'La parola inserita non è palindroma');
+// console.log(isWordPalindrome() ? 'La parola inserita è palindroma' : 'La parola inserita non è palindroma');
 
 // ^ Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -22,6 +22,14 @@ console.log(isWordPalindrome() ? 'La parola inserita è palindroma' : 'La parola
 // Sommiamo i due numeri
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
+
+// * l'utente sceglie pari o dispari e controllo che l'input sia valido
+let userChoice = prompt("Scegli 'pari' o 'dispari'");
+
+while (userChoice !== 'pari' && userChoice !== 'dispari') {
+	console.log('parola sbagliata');
+	userChoice = prompt("Parola non adatta, scegli 'pari' o 'dispari'");
+}
 
 // ! Consigli del giorno
 // 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
