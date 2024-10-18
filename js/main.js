@@ -31,6 +31,10 @@ while (userChoice !== 'pari' && userChoice !== 'dispari') {
 	userChoice = prompt("Parola non adatta, scegli 'pari' o 'dispari'");
 }
 
+// * Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+let pcNum = Math.floor(Math.random() * (5 - 1) + 1);
+console.log('Il numero del computer è: ' + pcNum);
+
 // ! Consigli del giorno
 // 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 // 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
