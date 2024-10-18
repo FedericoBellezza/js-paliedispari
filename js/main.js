@@ -32,8 +32,10 @@ while (userChoice !== 'pari' && userChoice !== 'dispari') {
 }
 
 // * Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-let pcNum = Math.floor(Math.random() * (5 - 1) + 1);
-console.log('Il numero del computer è: ' + pcNum);
+function randomNumberGeneration(min, max) {
+	return Math.floor(Math.random() * (max - min) + min);
+}
+console.log('Il numero del computer è: ' + randomNumberGeneration(1, 5));
 
 // ! Consigli del giorno
 // 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
